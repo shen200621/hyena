@@ -1,0 +1,2 @@
+<?php
+$foo = 'yiligo test';
