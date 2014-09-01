@@ -1,4 +1,4 @@
 hyena
 =====
 
-A test repository named hyena.
+An open source framework named hyena.
