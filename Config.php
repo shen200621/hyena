@@ -19,7 +19,11 @@ class Config
         self::$_config = array_merge(self::$_config, $config);
     }
 
-    public static function get($name = null, $default = null) {}
+    public static function get($name = null, $default = null) {
+        $name = (string) $name;
+        return array_key_exists($name, self::$_config) 
+            ? self::$_config[$name] : $default;
+    }
 
     public static function set($name, $value) {}
 }
