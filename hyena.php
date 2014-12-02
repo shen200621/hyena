@@ -9,3 +9,7 @@
  */
 
 namespace hyena;
+
+use hyena\Autoload;
+use hyena\Config;
+use hyena\Error;
