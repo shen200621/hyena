@@ -1,2 +1,2 @@
 <?PHP
-echo 'fat fan';
+echo phpinfo();
