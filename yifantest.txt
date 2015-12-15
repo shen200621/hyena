@@ -11,5 +11,3 @@ today is 2015 1125;
 
 added in dev
 added in test
-added in dev for cherry_pick
-added in test for cherry-pick
