@@ -1,7 +1,9 @@
 var http = require("http");
-http.createServer(function (request,response){
-	response.writeHead(200,{'COntent-Type':'text/plain'});
-	response.end('Hello world\n');
-}).listen(8888);
+var server = http.createServer();
 
-console.log('Server running at htp://127.0.0.1:8888/');
+server.on("request",function(req,res){
+	console.log(req.url);
+	res.end();
+});
+
+server.listen(1337,"127.0.0.1");
