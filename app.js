@@ -1,25 +1,25 @@
-var foo=require('./foo.js');
-var myFoo=new foo("Tom",40);
-console.log("获取修改前的私有变量值");
-console.log(myFoo.GetName());
-console.log(myFoo.GetAge());
+var http = require("http");
+var domain = require('domain');
 
-console.log("修改私有变量值");
-myFoo.SetName("BOB");
-myFoo.SetAge(30);
+http.createServer(function(req,res){
+	var d = domain.create();
+	d.once('error',function(err){
+		res.writeHead(200,{'Content-Type':'text/html'});
+		res.write('<head><meta charset="utf-8"/></head>');
+		res.write('接受客户端请求时发生以下错误');
+		res.end(error.message);
+	})
 
-console.log("修改后的私有变量");
-console.log(myFoo.GetName());
-console.log(myFoo.GetAge());
-
-console.log("获取修改前的共有变量");
-console.log(myFoo.name);
-console.log(myFoo.age);
-
-console.log('修改共有变量');
-myFoo.name="Bob";
-myFoo.age=30;
-
-console.log("获取修改后的公有变量");
-console.log(myFoo.name);
-console.log(myFoo.age);
+	d.run(function(){
+		if(req.url !== "/favicon.ico"){
+		noneexist();
+		res.writeHead(200,{'Content-Type':'text/html'});
+		res.write('<head><meta charset="utf-8"/></head>');
+		res.end("你好\n");
+		}
+	})	
+}).listen(1337,'127.0.0.1');
+process.on('uncaughtException',function(err){
+	console.log("接受客户端请求时发生以下错误");
+	console.log(err)
+});
