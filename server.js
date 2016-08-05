@@ -1,9 +1,19 @@
 var http = require("http");
-var server = http.createServer();
+var domain = require("domain");
 
-server.on("request",function(req,res){
-	console.log(req.url);
-	res.end();
-});
-
-server.listen(1337,"127.0.0.1");
+http.createServer(function(req,res){
+	var reqd = domain.create();
+	reqd.add(req);
+	reqd.add(res);
+	reqd.on('error',function(err){
+		res.writeHead(200);
+		res.write('服务器端接受客户端请求时发生以下错误：');
+		res.end(err.message);
+	});
+	res.writeHead(200);
+	req.on('data',function(){
+		noneexists();
+		res.write('你好。');
+		res.end();
+	});
+}).listen(1337);
