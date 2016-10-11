@@ -15,3 +15,4 @@ added in test
 hahahah
 	连猴子都懂的Git命令
 add 把变更录入到索引中
+还行，不知道会不会冲突
