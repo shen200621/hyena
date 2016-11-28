@@ -1,3 +1,8 @@
-# naffan_test
-一个测试用的学习github操作的项目
-玩儿玩儿
+hyena[ENG]
+=====
+
+An open source framework named hyena.
+
+
+[CHN]
+一个开源框架命名为hyena。
