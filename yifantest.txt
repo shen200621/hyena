@@ -1,0 +1,18 @@
+8;
+7;
+6;
+5;
+4;
+3;
+2;
+1;
+today is 2015 1125;
+
+
+added in dev
+asdflkasf
+added in test
+hahahah
+	连猴子都懂的Git命令
+add 把变更录入到索引中
+还是最后一行·
